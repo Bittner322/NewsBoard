@@ -1,8 +1,31 @@
+import io.gitlab.arturbosch.detekt.Detekt
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "8.2.2" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.22" apply false
-    id("com.google.dagger.hilt.android") version "2.49" apply (false)
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.22" apply false
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin) apply false
+    alias(libs.plugins.hilt.android) apply false
+    alias(libs.plugins.serialization) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.detekt)
 }
+
+tasks.register<Detekt>("detektAll") {
+    parallel = true
+    setSource(projectDir)
+    include("**/*.kt", "**/*.kts")
+    exclude("**/resources/**", "**/build/**")
+    config.setFrom(project.file("config/detekt/detekt.yml"))
+}
+
+dependencies {
+    detekt(libs.detekt.cli)
+    detektPlugins(libs.detekt.rules.compose)
+}
+
+val appName by extra("NewsBoard")
+val appVersion by extra("1.0.0")
+val appVersionCode by extra(1)
+val compileSdk by extra(34)
+val minSdk by extra(26)
+val targetSdk by extra(34)

@@ -1,22 +1,23 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin)
     kotlin("kapt")
-    id("com.google.dagger.hilt.android")
-    id("org.jetbrains.kotlin.plugin.serialization")
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17"
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.detekt)
 }
 
 android {
     namespace = "com.mikhail.newsboard"
-    compileSdk = 34
+    compileSdk = rootProject.extra["compileSdk"] as Int
 
     defaultConfig {
         applicationId = "com.mikhail.newsboard"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = rootProject.extra["minSdk"] as Int
+        targetSdk = rootProject.extra["compileSdk"] as Int
+        versionCode = rootProject.extra["appVersionCode"] as Int
+        versionName = rootProject.extra["appVersion"] as String
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
