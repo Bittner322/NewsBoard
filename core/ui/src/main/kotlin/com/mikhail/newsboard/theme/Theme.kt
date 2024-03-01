@@ -1,4 +1,4 @@
-package com.mikhail.newsboard.ui.theme
+package com.mikhail.newsboard.theme
 
 import android.app.Activity
 import android.os.Build

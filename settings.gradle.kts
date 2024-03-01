@@ -1,3 +1,5 @@
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     repositories {
         google()
@@ -14,5 +16,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "NewsBoard"
-include(":app")
+include(
+    ":app",
+    ":core:ui",
+    ":core:database"
+)
  

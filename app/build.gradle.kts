@@ -1,8 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin)
-    kotlin("kapt")
-    alias(libs.plugins.hilt.android)
     alias(libs.plugins.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
@@ -56,7 +54,13 @@ android {
 
 dependencies {
 
+    implementation(projects.core.ui)
+    implementation(projects.core.database)
+
     implementation(libs.decompose)
+    implementation(libs.decompose.jetpack)
+    implementation(libs.essenty.lifecycle)
+    implementation(libs.essenty.lifecycle.coroutines)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.ktx)
@@ -73,10 +77,10 @@ dependencies {
     implementation(libs.kotlinx.serialization.converter)
     implementation(libs.retrofit)
     implementation(libs.coroutines)
-    implementation(libs.hilt.android)
-    implementation(libs.hilt.compose)
-    kapt(libs.hilt.android.compiler)
-    kapt(libs.hilt.compiler)
+    implementation(libs.dagger.core)
+    implementation(libs.dagger.android.support)
+    ksp(libs.dagger.android.processor)
+    ksp(libs.dagger.compiler)
     implementation(libs.room.ktx)
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
