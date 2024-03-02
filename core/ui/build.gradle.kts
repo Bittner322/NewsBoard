@@ -1,28 +1,9 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin)
+    id("newsboard.android-compose")
+    id("newsboard.anvil")
 }
 
-android {
-    namespace = "com.mikhail.newsboard.core.ui"
-
-    compileSdk = rootProject.extra["compileSdk"] as Int
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.10"
-    }
-}
+android.namespace = "com.mikhail.newsboard.core.ui"
 
 dependencies {
     implementation(libs.activity.compose)
