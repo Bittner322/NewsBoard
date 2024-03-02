@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin)
 }
 
 android {
@@ -7,14 +8,12 @@ android {
 
     compileSdk = rootProject.extra["compileSdk"] as Int
 
-    defaultConfig {
-        minSdk = rootProject.extra["minSdk"] as Int
-        targetSdk = rootProject.extra["compileSdk"] as Int
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
     }
 
     buildFeatures {

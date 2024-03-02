@@ -1,6 +1,8 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
+    includeBuild("build-logic")
+
     repositories {
         google()
         mavenCentral()
@@ -19,6 +21,8 @@ rootProject.name = "NewsBoard"
 include(
     ":app",
     ":core:ui",
-    ":core:database"
+    ":core:database",
+    ":features:onboarding:api",
+    ":features:onboarding:impl"
 )
  

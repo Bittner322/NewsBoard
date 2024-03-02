@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.detekt)
+    kotlin("kapt")
 }
 
 android {
@@ -33,11 +34,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -56,11 +57,11 @@ dependencies {
 
     implementation(projects.core.ui)
     implementation(projects.core.database)
+    implementation(projects.features.onboarding.api)
+    implementation(projects.features.onboarding.impl)
 
     implementation(libs.decompose)
     implementation(libs.decompose.jetpack)
-    implementation(libs.essenty.lifecycle)
-    implementation(libs.essenty.lifecycle.coroutines)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.ktx)
@@ -79,8 +80,8 @@ dependencies {
     implementation(libs.coroutines)
     implementation(libs.dagger.core)
     implementation(libs.dagger.android.support)
-    ksp(libs.dagger.android.processor)
-    ksp(libs.dagger.compiler)
+    kapt(libs.dagger.android.processor)
+    kapt(libs.dagger.compiler)
     implementation(libs.room.ktx)
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
