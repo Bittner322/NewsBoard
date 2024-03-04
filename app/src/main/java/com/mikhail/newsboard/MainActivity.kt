@@ -6,35 +6,23 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.arkivanov.decompose.defaultComponentContext
+import com.mikhail.newsboard.root.DefaultRootComponent
+import com.mikhail.newsboard.root.RootContent
 import com.mikhail.newsboard.theme.NewsBoardTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val root = DefaultRootComponent(componentContext = defaultComponentContext())
+
         enableEdgeToEdge()
         setContent {
             NewsBoardTheme {
-                // A surface container using the 'background' color from the theme
-
-                var backgroundScreen by remember {
-                    mutableStateOf(Color.Blue)
-                }
-                val colorGenerator: ColorGenerator = remember {
-                    ColorGeneratorImpl()
-                }
-                OnboardingScreen(
-                    color = backgroundScreen,
-                    onClick = {
-                        backgroundScreen = colorGenerator.onClick(backgroundScreen)
-                    }
-                )
+                RootContent(component = root)
             }
         }
     }

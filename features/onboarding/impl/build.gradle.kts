@@ -1,6 +1,7 @@
 plugins {
     id("newsboard.android-compose")
     id("newsboard.anvil")
+    kotlin("plugin.serialization")
 }
 
 android.namespace = "com.mikhail.newsboard.features.onboarding.impl"
@@ -13,4 +14,5 @@ dependencies {
     implementation(libs.compose.graphics)
     implementation(libs.compose.tooling)
     implementation(libs.compose.material)
+    implementation(libs.decompose)
 }

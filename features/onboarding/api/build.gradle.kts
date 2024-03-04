@@ -6,6 +6,7 @@ plugins {
 android.namespace = "com.mikhail.newsboard.features.onboarding.api"
 
 dependencies {
+    implementation(libs.decompose)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
