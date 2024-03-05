@@ -5,4 +5,6 @@ import com.arkivanov.decompose.ComponentContext
 class DefaultOnboardingComponent(
     componentContext: ComponentContext
 ): OnboardingComponent, ComponentContext by componentContext {
+
+
 }

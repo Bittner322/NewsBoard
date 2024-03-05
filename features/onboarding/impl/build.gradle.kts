@@ -8,6 +8,7 @@ android.namespace = "com.mikhail.newsboard.features.onboarding.impl"
 
 dependencies {
     implementation(projects.features.onboarding.api)
+    implementation(projects.core.ui)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)

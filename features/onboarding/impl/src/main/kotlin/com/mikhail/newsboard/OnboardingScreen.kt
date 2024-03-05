@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import com.mikhail.newsboard.theme.NewsTheme
 
 @Composable
 fun OnboardingScreen(
@@ -15,16 +15,6 @@ fun OnboardingScreen(
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(color = Color.Red)
+            .background(color = NewsTheme.color.primary)
     )
-}
-
-class ColorGeneratorImpl: ColorGenerator {
-    override fun onClick(backgroundScreen: Color): Color {
-        return if (backgroundScreen == Color.Blue) {
-            Color.Red
-        } else {
-            Color.Blue
-        }
-    }
 }

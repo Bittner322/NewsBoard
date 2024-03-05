@@ -18,7 +18,7 @@ import com.mikhail.newsboard.OnboardingScreen
 @Composable
 fun RootContent(
     component: RootComponent,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     MaterialTheme {
         Surface(
