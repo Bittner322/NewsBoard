@@ -23,6 +23,8 @@ include(
     ":core:ui",
     ":core:database",
     ":features:onboarding:api",
-    ":features:onboarding:impl"
+    ":features:onboarding:impl",
+    ":features:registration:api",
+    ":features:registration:impl",
 )
  

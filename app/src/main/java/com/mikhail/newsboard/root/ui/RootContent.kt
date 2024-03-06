@@ -1,4 +1,4 @@
-package com.mikhail.newsboard.root
+package com.mikhail.newsboard.root.ui
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,7 +13,8 @@ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.plus
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackAnimation
-import com.mikhail.newsboard.OnboardingScreen
+import com.mikhail.newsboard.ui.OnboardingScreen
+import com.mikhail.newsboard.root.component.RootComponent
 
 @Composable
 fun RootContent(

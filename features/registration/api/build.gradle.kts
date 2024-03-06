@@ -3,7 +3,7 @@ plugins {
     id("newsboard.anvil")
 }
 
-android.namespace = "com.mikhail.newsboard.features.onboarding.api"
+android.namespace = "com.mikhail.newsboard.features.registration.api"
 
 dependencies {
     implementation(libs.decompose)

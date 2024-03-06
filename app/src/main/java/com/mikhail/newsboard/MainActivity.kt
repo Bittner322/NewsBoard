@@ -5,8 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.arkivanov.decompose.defaultComponentContext
-import com.mikhail.newsboard.root.DefaultRootComponent
-import com.mikhail.newsboard.root.RootContent
+import com.mikhail.newsboard.root.component.DefaultRootComponent
+import com.mikhail.newsboard.root.ui.RootContent
 import com.mikhail.newsboard.theme.NewsTheme
 
 class MainActivity : ComponentActivity() {

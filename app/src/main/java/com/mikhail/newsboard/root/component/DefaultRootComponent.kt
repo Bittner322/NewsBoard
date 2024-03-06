@@ -1,4 +1,4 @@
-package com.mikhail.newsboard.root
+package com.mikhail.newsboard.root.component
 
 import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
@@ -6,7 +6,7 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.decompose.router.stack.popTo
 import com.arkivanov.decompose.value.Value
-import com.mikhail.newsboard.DefaultOnboardingComponent
+import com.mikhail.newsboard.component.DefaultOnboardingComponent
 import com.mikhail.newsboard.OnboardingComponent
 import kotlinx.serialization.Serializable
 

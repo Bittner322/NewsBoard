@@ -1,4 +1,4 @@
-package com.mikhail.newsboard.root
+package com.mikhail.newsboard.root.component
 
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.value.Value
