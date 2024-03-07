@@ -16,22 +16,18 @@ data class NewsTypography(
 @Composable
 fun ProvideNewsTypography(): NewsTypography = NewsTypography(
     regular = TextStyle(
-        fontSize = 16.sp,
         lineHeight = 24.sp,
         fontWeight = FontWeight(400)
     ),
     medium = TextStyle(
-        fontSize = 16.sp,
         lineHeight = 24.sp,
         fontWeight = FontWeight(500)
     ),
     semibold = TextStyle(
-        fontSize = 16.sp,
         lineHeight = 24.sp,
         fontWeight = FontWeight(600)
     ),
     bold = TextStyle(
-        fontSize = 16.sp,
         lineHeight = 24.sp,
         fontWeight = FontWeight(700)
     )

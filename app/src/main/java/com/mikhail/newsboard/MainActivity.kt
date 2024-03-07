@@ -12,10 +12,10 @@ import com.mikhail.newsboard.theme.NewsTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
         val root = DefaultRootComponent(componentContext = defaultComponentContext())
 
-        enableEdgeToEdge()
         setContent {
             NewsTheme {
                 RootContent(component = root)
