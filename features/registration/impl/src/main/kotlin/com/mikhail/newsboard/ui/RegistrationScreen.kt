@@ -7,7 +7,7 @@ import com.mikhail.newsboard.RegistrationComponent
 @Composable
 fun RegistrationScreen(
     component: RegistrationComponent,
-    modifier: Modifier
+    modifier: Modifier = Modifier
 ) {
 
 }

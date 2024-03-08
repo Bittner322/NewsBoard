@@ -15,6 +15,7 @@ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.scale
 import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackAnimation
 import com.mikhail.newsboard.ui.OnboardingScreen
 import com.mikhail.newsboard.root.component.RootComponent
+import com.mikhail.newsboard.ui.RegistrationScreen
 
 @Composable
 fun RootContent(
@@ -34,6 +35,10 @@ fun RootContent(
             ) {
                 when (val instance = it.instance) {
                     is RootComponent.Child.Onboarding -> OnboardingScreen(
+                        component = instance.component
+                    )
+
+                    is RootComponent.Child.Registration -> RegistrationScreen(
                         component = instance.component
                     )
                 }

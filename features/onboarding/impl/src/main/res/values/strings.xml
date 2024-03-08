@@ -5,4 +5,5 @@
     <string name="onboarding_pager_item_categorize">Categorize it</string>
     <string name="onboarding_pager_item_save">And save that</string>
     <string name="onboarding_next_button">Next</string>
+    <string name="onboarding_get_started_button">Get started</string>
 </resources>

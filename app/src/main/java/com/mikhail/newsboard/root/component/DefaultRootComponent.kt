@@ -4,10 +4,12 @@ import com.arkivanov.decompose.ComponentContext
 import com.arkivanov.decompose.router.stack.ChildStack
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.decompose.router.stack.childStack
-import com.arkivanov.decompose.router.stack.popTo
+import com.arkivanov.decompose.router.stack.push
 import com.arkivanov.decompose.value.Value
-import com.mikhail.newsboard.component.DefaultOnboardingComponent
 import com.mikhail.newsboard.OnboardingComponent
+import com.mikhail.newsboard.RegistrationComponent
+import com.mikhail.newsboard.component.DefaultOnboardingComponent
+import com.mikhail.newsboard.component.DefaultRegistrationComponent
 import kotlinx.serialization.Serializable
 
 class DefaultRootComponent(
@@ -34,18 +36,32 @@ class DefaultRootComponent(
                 childComponentContext
             )
         )
+        Config.Registration -> RootComponent.Child.Registration(
+            registrationComponent(
+                childComponentContext
+            )
+        )
     }
 
     private fun onboardingComponent(componentContext: ComponentContext): OnboardingComponent =
-        DefaultOnboardingComponent(componentContext = componentContext)
+        DefaultOnboardingComponent(
+            componentContext = componentContext,
+            onNavToRegistrationClick = {
+                navigation.push(
+                    Config.Registration
+                )
+            }
+        )
 
-    override fun onBackClicked(toIndex: Int) {
-        navigation.popTo(index = toIndex)
-    }
+    private fun registrationComponent(componentContext: ComponentContext): RegistrationComponent =
+        DefaultRegistrationComponent(componentContext = componentContext)
 
     @Serializable
     private sealed interface Config {
         @Serializable
         data object Onboarding : Config
+
+        @Serializable
+        data object Registration : Config
     }
 }

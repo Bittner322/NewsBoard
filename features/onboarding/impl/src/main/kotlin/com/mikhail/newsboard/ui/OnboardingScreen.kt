@@ -5,12 +5,15 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -27,6 +30,8 @@ import com.mikhail.newsboard.theme.NewsTheme
 import com.mikhail.newsboard.widgets.NewsCenterAlignedTopBar
 import com.mikhail.newsboard.widgets.NewsPagerIndicator
 import com.mikhail.newsboard.widgets.NewsSingleLineButton
+
+private const val LastPageIndex = 2
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -56,7 +61,11 @@ fun OnboardingScreen(
                 )
             )
             val progress by animateLottieCompositionAsState(composition)
-            Column {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 LottieAnimation(
                     composition = composition,
                     progress = { progress },
@@ -78,9 +87,25 @@ fun OnboardingScreen(
 
         Spacer(modifier = Modifier.weight(1f))
 
+        val coroutineScope = rememberCoroutineScope()
+
         NewsSingleLineButton(
-            text = stringResource(R.string.onboarding_next_button),
-            onClick = { component.onNextStepClick(pagerState, 1) }
+            modifier = Modifier.padding(bottom = 16.dp),
+            text = if (pagerState.currentPage == LastPageIndex) {
+                stringResource(R.string.onboarding_get_started_button)
+            } else {
+                stringResource(R.string.onboarding_next_button)
+            },
+            onClick = {
+                if (pagerState.currentPage == LastPageIndex) {
+                    component.onGetStartedClick()
+                } else {
+                    component.onNextStepClick(
+                        pagerState = pagerState,
+                        coroutineScope = coroutineScope
+                    )
+                }
+            }
         )
     }
 }
