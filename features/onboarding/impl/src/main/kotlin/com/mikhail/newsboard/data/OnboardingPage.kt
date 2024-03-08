@@ -1,11 +1,23 @@
 package com.mikhail.newsboard.data
 
-import com.mikhail.newsboard.core.ui.R
+import com.mikhail.newsboard.features.onboarding.impl.R
 
-enum class OnboardingPage(val resource: Int) {
-    SEARCH(resource = R.drawable.ic_search),
-    CATEGORIZE(resource = R.drawable.ic_categories),
-    SAVE(resource = R.drawable.ic_bookmark);
+enum class OnboardingPage(
+    val resource: Int,
+    val description: Int
+) {
+    SEARCH(
+        resource = R.raw.lottie_search,
+        description = R.string.onboarding_pager_item_search
+    ),
+    CATEGORIZE(
+        resource = R.raw.lottie_categorize,
+        description = R.string.onboarding_pager_item_categorize
+    ),
+    SAVE(
+        resource = R.raw.lottie_bookmark,
+        description = R.string.onboarding_pager_item_save
+    );
 
     companion object {
 

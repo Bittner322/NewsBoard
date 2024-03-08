@@ -17,6 +17,7 @@ android-application = "8.2.2"
 kotlin = "1.9.22"
 dagger = "2.50"
 anvil = "2.4.8"
+lottie = "6.3.0"
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
@@ -77,3 +78,5 @@ detekt-cli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = 
 detekt-rules-compose = { module = "ru.kode:detekt-rules-compose", version.ref = "detekt_compose_rules" }
 
 square-anvil-gradle = { module = "com.squareup.anvil:gradle-plugin", version.ref = "anvil" }
+
+lottie = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }

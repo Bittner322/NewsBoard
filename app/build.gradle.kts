@@ -57,6 +57,7 @@ dependencies {
 
     implementation(projects.core.ui)
     implementation(projects.core.database)
+    implementation(projects.core.decompose)
     implementation(projects.features.onboarding.api)
     implementation(projects.features.onboarding.impl)
     implementation(projects.features.registration.api)

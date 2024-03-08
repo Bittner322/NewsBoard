@@ -22,6 +22,7 @@ include(
     ":app",
     ":core:ui",
     ":core:database",
+    ":core:decompose",
     ":features:onboarding:api",
     ":features:onboarding:impl",
     ":features:registration:api",

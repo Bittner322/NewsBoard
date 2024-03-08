@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="onboarding_topbar_title">Добро пожаловать!</string>
+    <string name="onboarding_topbar_title">Welcome!</string>
+    <string name="onboarding_pager_item_search">Search news</string>
+    <string name="onboarding_pager_item_categorize">Categorize it</string>
+    <string name="onboarding_pager_item_save">And save that</string>
+    <string name="onboarding_next_button">Next</string>
 </resources>
