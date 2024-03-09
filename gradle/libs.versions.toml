@@ -2,7 +2,7 @@
 ktx = "1.12.0"
 lifecycle = "2.7.0"
 activity-compose = "1.8.2"
-compose-bom = "2024.02.01"
+compose-bom = "2024.02.02"
 kotlinx-serialization = "1.6.3"
 kotlinx-serialization-converter = "0.8.0"
 retrofit = "2.9.0"
@@ -16,7 +16,7 @@ detekt_compose_rules = "1.3.0"
 android-application = "8.2.2"
 kotlin = "1.9.22"
 dagger = "2.50"
-anvil = "2.4.8"
+anvil = "2.4.9"
 lottie = "6.3.0"
 
 [plugins]

@@ -3,6 +3,7 @@ package com.mikhail.newsboard.theme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun NewsTheme(
@@ -28,3 +29,5 @@ object NewsTheme {
         @Composable
         get() = LocalNewsTypography.current
 }
+
+val bottomNavHeight = 80.dp
