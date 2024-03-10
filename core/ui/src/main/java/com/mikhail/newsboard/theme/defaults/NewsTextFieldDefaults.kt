@@ -16,7 +16,9 @@ object NewsTextFieldDefaults {
         unfocusedContainerColor: Color = NewsTheme.color.greySuperLight,
         focusedContainerColor: Color = NewsTheme.color.white,
         unfocusedBorderColor: Color = NewsTheme.color.greySuperLight,
-        focusedBorderColor: Color = NewsTheme.color.primary
+        focusedBorderColor: Color = NewsTheme.color.primary,
+        unfocusedLeadingIconColor: Color = NewsTheme.color.grey,
+        focusedLeadingIconColor: Color = NewsTheme.color.primary
     ): TextFieldColors {
 
         return OutlinedTextFieldDefaults.colors(
@@ -28,7 +30,9 @@ object NewsTextFieldDefaults {
             unfocusedContainerColor = unfocusedContainerColor,
             focusedContainerColor = focusedContainerColor,
             unfocusedBorderColor = unfocusedBorderColor,
-            focusedBorderColor = focusedBorderColor
+            focusedBorderColor = focusedBorderColor,
+            unfocusedLeadingIconColor = unfocusedLeadingIconColor,
+            focusedLeadingIconColor = focusedLeadingIconColor
         )
     }
 }

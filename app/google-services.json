@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721349829468",
+    "project_id": "newsboard-47bc9",
+    "storage_bucket": "newsboard-47bc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721349829468:android:7c5b0b15fd1c916b205799",
+        "android_client_info": {
+          "package_name": "com.mikhail.newsboard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLcD56wDN9XsNWujVNK-2gVmEcK7lHlWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -54,7 +54,10 @@ class DefaultRootComponent(
         )
 
     private fun registrationComponent(componentContext: ComponentContext): RegistrationComponent =
-        DefaultRegistrationComponent(componentContext = componentContext)
+        DefaultRegistrationComponent(
+            componentContext = componentContext,
+            onRegister = {}
+        )
 
     @Serializable
     private sealed interface Config {

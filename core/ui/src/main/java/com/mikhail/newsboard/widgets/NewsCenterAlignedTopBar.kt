@@ -23,7 +23,7 @@ fun NewsCenterAlignedTopBar(
                 text = text,
                 color = NewsTheme.color.black,
                 style = NewsTheme.typography.semibold,
-                fontSize = 24.sp,
+                fontSize = 16.sp,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )

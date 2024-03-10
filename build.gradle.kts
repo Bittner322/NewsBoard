@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.serialization) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.square.anvil) apply false
+    alias(libs.plugins.google.services.plugin) apply false
     alias(libs.plugins.detekt)
 }
 

@@ -22,7 +22,6 @@ fun NewsSingleLineButton(
 ) {
     Button(
         modifier = modifier
-            .padding(horizontal = 16.dp)
             .fillMaxWidth(),
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),

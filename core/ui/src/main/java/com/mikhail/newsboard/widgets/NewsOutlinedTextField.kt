@@ -19,6 +19,7 @@ fun NewsOutlinedTextField(
     singleLine: Boolean = false,
     charsLimit: Int = Int.MAX_VALUE,
     placeholder: @Composable (() -> Unit)? = null,
+    leadingIcon: @Composable (() -> Unit)? = null,
     keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
     visualTransformation: VisualTransformation = VisualTransformation.None
 ) {
@@ -32,6 +33,7 @@ fun NewsOutlinedTextField(
         },
         singleLine = singleLine,
         placeholder = placeholder,
+        leadingIcon = leadingIcon,
         shape = RoundedCornerShape(12.dp),
         colors = NewsTextFieldDefaults.textFieldColors(),
         keyboardOptions = keyboardOptions,

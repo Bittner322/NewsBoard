@@ -7,4 +7,6 @@
     <string name="registration_password_placeholder">Password</string>
     <string name="registration_repeat_password_placeholder">Repeat password</string>
     <string name="registration_sign_up_button">Sign up</string>
+    <string name="registration_already_have_an_account_title">Already have an account?</string>
+    <string name="registration_sign_in_title">Sign In</string>
 </resources>

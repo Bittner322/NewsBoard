@@ -18,6 +18,9 @@ kotlin = "1.9.22"
 dagger = "2.50"
 anvil = "2.4.9"
 lottie = "6.3.0"
+google-services-plugin = "4.4.1"
+firebase = "32.7.4"
+play-services-auth = "21.0.0"
 
 [plugins]
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
@@ -27,6 +30,7 @@ kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 square-anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
+google-services-plugin = { id = "com.google.gms.google-services", version.ref = "google-services-plugin" }
 
 [libraries]
 
@@ -80,3 +84,9 @@ detekt-rules-compose = { module = "ru.kode:detekt-rules-compose", version.ref = 
 square-anvil-gradle = { module = "com.squareup.anvil:gradle-plugin", version.ref = "anvil" }
 
 lottie = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "play-services-auth" }
